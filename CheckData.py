@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import os
 from datetime import datetime, timedelta
 
@@ -12,7 +11,7 @@ def cek_file_hilang(direktori, tanggal_awal, tanggal_akhir):
         nama_file = tanggal.strftime("%Y-%m-%dT%H-%M-%S") + ".mp4"
 
         if nama_file not in os.listdir(direktori):
-            print(f"File hilang: {nama_file}")
+            print("File hilang: {}".format(nama_file))
             ada_tanggal_hilang = True
 
         tanggal += timedelta(hours=1)
